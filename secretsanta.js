@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function main() {
 		
 		var newRemoveButton = document.createElement('a');
 		newRemoveButton.setAttribute('id','remove_p'+numParticipants);
-		var removeText = document.createTextNode('Remove');
+		var removeText = document.createTextNode('-');
 		newRemoveButton.appendChild(removeText);
 		newRemoveButton.addEventListener('click',removePerson);
 		
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function main() {
 			}
 			
 			if (emptyFields) {
-				displayValidationError("You have empty fields");
+				displayValidationError("Ho Ho NO! You have one or more empty name fields. Please enter the names of the missing people, or remove them from the list.");
 				return;
 			}
 			
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function main() {
 		
 				
 		} else {
-			displayValidationError('You must have 2 or more participants');
+			displayValidationError('Ho Ho NO! You cannot do a Secret Santa with less than two people!');
 			return;
 		}
 		
@@ -199,5 +199,6 @@ document.addEventListener('DOMContentLoaded', function main() {
 	document.getElementById("remove_p2").addEventListener("click",removePerson);
 	document.getElementById("remove_p3").addEventListener("click",removePerson);
 	document.getElementById("pair").addEventListener("click",validate);
+
 	
 });
