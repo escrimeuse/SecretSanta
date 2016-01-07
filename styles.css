@@ -1,5 +1,8 @@
 body {
 	margin: 0 0 0 0;
+	font-family:Arial;
+	color:green;
+	margin-bottom: 500px;
 }
 
 header {
@@ -8,6 +11,7 @@ header {
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center;
+
 }
 
 header  h1 {
@@ -19,6 +23,92 @@ header  h1 {
 h1 {
 	color: red;
 }
+
+div.main {
+	margin-left:10%;
+	margin-right:10%;
+	position:relative;
+}
+
+div.bordered {
+	border: 1px solid red;
+	width: 40%;
+	padding: 25px;
+
+}
+
+div#participant-input {
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+div#pairings-output {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+.main h1 {
+	margin: 0;
+
+}
+
+.buttons {
+	padding: 10px;
+	margin: 2px;
+	border: 1px solid red;
+	color: red;
+}
+
+#participants p {
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+
+#participants label {
+
+	padding-right:10px;
+
+}
+
+#participants a , span a{
+	margin-left:10px;
+	padding-top: 2px;
+	padding-bottom:2px;
+	padding-left:8px;
+	padding-right:8px;
+	border: 1px solid green;
+	height:2px;
+}
+
+#participants input {
+	border: 1px solid green;
+	padding: 10px;
+	font-family:Arial;
+	color:green;
+}
+
+a {
+	cursor:pointer;
+}
+
+header a {
+	color:white;
+	text-decoration:none;
+}
+
+header p {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 6px;
+	font-weight: bold;
+	text-align:right;
+}
+
+
 
 
 
