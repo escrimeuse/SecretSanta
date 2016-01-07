@@ -8,25 +8,33 @@
 	<body>
 	<header>
 		<h1>Secret Santa</h1>
+		<p><a href="http://www.github.com/escrimeuse/secretsanta">View Code<br/>on GitHub</a></p>
 	</header>
-	<div>
-		<h1>Participants</h1>
-		<form id="secretsanta">
-			<div id="participants">
-				<p id="p1"><label for="person1">Name</label><input id="person1" type="text"></input><a id="remove_p1">Remove</a></p>
-				<p id="p2"><label for="person2">Name</label><input id="person2" type="text"></input><a id="remove_p2">Remove</a></p>
-				<p id="p3"><label for="person3">Name</label><input id="person3" type="text"></input><a id="remove_p3">Remove</a></p>
-			</div>
-			<a id="addmore">Add more people</a>
-			<a id="pair">Get pairings!</a>
-		</form>
-	</div>
-	<div>
-		<h1>Pairings</h1>
-		<div id="pairings">
+	<div class="main">
+		<div class="bordered" id="participant-input">
+			<h1>Participants</h1>
+			<p>Enter the names of the people that will be participating into the form below.</p>
 		
+			<form id="secretsanta">
+				<div id="participants">
+					<p id="p1"><label for="person1">Name</label><input id="person1" type="text"></input><a id="remove_p1">-</a></p>
+					<p id="p2"><label for="person2">Name</label><input id="person2" type="text"></input><a id="remove_p2">-</a></p>
+					<p id="p3"><label for="person3">Name</label><input id="person3" type="text"></input><a id="remove_p3">-</a></p>
+				</div>
+				<a id="addmore" class="buttons">Add Another Participant</a>
+				<a id="pair" class="buttons">Get Pairings</a>
+			</form>
 		</div>
+		<div class="bordered" id="pairings-output">
+			<h1>Pairings</h1>
+			<div id="pairings">
+			<p>Ho Ho Ho! When you are ready to pair everyone up, click on the "Get Pairings" button!</p>
+			</div>
+		</div>
+	
 	</div>
+	
+	
 	
 	</body>
 </html>
