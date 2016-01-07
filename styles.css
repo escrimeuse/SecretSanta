@@ -96,9 +96,14 @@ div#pairings-output {
 	width:75%;
 }
 
+#participants input:focus {
+	outline: 1px solid #0F8A5F;
+}
+
 #participants {
-	margin-top:40px;
-	margin-bottom:50px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-bottom:50px;
 }
 
 a {
@@ -136,6 +141,22 @@ hr {
 	border:0px;
 	height:1px;
 	background-color:#0F8A5F;
+}
+
+#addmore {
+	position:absolute;
+	bottom:0;
+	left:0;
+	margin-bottom:25px;
+	margin-left:25px;
+}
+
+#pair {
+	position:absolute;
+	bottom:0;
+	right:0;
+	margin-bottom:25px;
+	margin-right:25px;
 }
 
 
