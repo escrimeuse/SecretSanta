@@ -134,15 +134,38 @@ document.addEventListener('DOMContentLoaded', function main() {
 	function displayPairs() {
 		var pairs = getPairs();
 		var displayArea = document.getElementById("pairings");
+		
 		displayArea.innerHTML = ''; 
 		
+		var introPairsText = document.createTextNode("Ho ho ho! Here are the pairings!");
+		var introPairsParagraph = document.createElement('p');
+		introPairsParagraph.appendChild(introPairsText);
+		displayArea.appendChild(introPairsParagraph);
+		
 		for (key in pairs) {
-			var text = document.createTextNode(key + ' will give to ' + pairs[key]);
-			var newNode = document.createElement('p');
-			newNode.appendChild(text);
-			displayArea.appendChild(newNode);
+			var giverNode = document.createElement('span');
+			giverNode.setAttribute('class','giver');
+			var giverText = document.createTextNode(key);
+			giverNode.appendChild(giverText);
+			
+			var receiverNode = document.createElement('span');
+			receiverNode.setAttribute('class','receiver');
+			var receiverText = document.createTextNode(pairs[key]);
+			receiverNode.appendChild(receiverText);
+			
+			var pairingNode= document.createElement('p');
+			pairingNode.appendChild(giverNode);
+			var text = document.createTextNode(' will give to ');
+			pairingNode.appendChild(text);
+			pairingNode.appendChild(receiverNode);
+
+			displayArea.appendChild(pairingNode);
 		}
 		
+		var wantNewPairsText = document.createTextNode("If you aren't happy with these pairings and want new ones, click on the \"Get Pairings\" button again.");
+		var wantNewPairsParagraph = document.createElement('p');
+		wantNewPairsParagraph.appendChild(wantNewPairsText);
+		displayArea.appendChild(wantNewPairsParagraph);
 		
 	}
 	
