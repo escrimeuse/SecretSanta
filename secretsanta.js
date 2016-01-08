@@ -65,20 +65,27 @@ document.addEventListener('DOMContentLoaded', function main() {
 		- a participant cannot be paired with themselves (i.e.: Person A cannot be the secret santa for Person A)
 		- a participant cannot be paired more than once (i.e.: Person A and Person B cannot both be the secret santa for Person C)
 		- every participant must be paired 
+		
+		To accomplish this, the pairs will be assigned as follows (thanks to github.com/dersam for thinking of this):
+		- the person at index 0 in the shuffled array will be paried with the person at index 1
+		- the person at index 1 will be paired with the person at index 2
+		- etc. until end of array
+		- the person at the last index will be paired with the person at index 0
+		
+		
 		*/
 		var shuffledParticipants = shuffle(participantArray);
 		var count = 0;
 		var pairings = {};
-		while (count < participantArray.length) {
-			var giver = participantArray[count];
-			var receiver = shuffledParticipants.pop();
-			
-			if (giver == receiver) {
-				var temp = receiver;
-				receiver = shuffledParticipants.pop();
-				shuffledParticipants.push(temp);
-				
+		while (count < shuffledParticipants.length) {
+			var giver = shuffledParticipants[count];
+			var receiver = undefined;
+			if(count == shuffledParticipants.length-1) {
+				receiver = shuffledParticipants[0]
 			} 
+			else {
+				receiver = shuffledParticipants[count+1];
+			}
 			
 			pairings[giver]=receiver;
 			
