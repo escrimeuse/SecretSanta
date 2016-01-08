@@ -223,6 +223,13 @@ hr {
 
 }
 
+span.giver {
+	font-weight:bold;
+}
+span.receiver {
+	font-weight:bold;
+	}
+
 
 
 
